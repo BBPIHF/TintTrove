@@ -3,7 +3,7 @@ import SingleColor from './SingleColor'
 import Values from 'values.js' //a library
 
 function App() {
-  const [color, setColor] = useState('');//state that take user input
+  const [color, setColor] = useState('');//state that take the user's input
   const [error, setError] = useState(false);
   const [list, setList] = useState(new Values('#940B92').all(10));// state that save array comming from library, default value provided
 
@@ -36,7 +36,7 @@ function App() {
         </form>
       </section>
   
-      <section className='color-container'> 
+      <section className='color-container'>
         {list.map((color,index)=>{
           return <SingleColor key={index} {...color} hex={color.hex} index={index}/>
         })}
